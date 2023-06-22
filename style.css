@@ -1,5 +1,7 @@
 .navbar {
     background-color: #204065;
+    top: 0px;
+    bottom: 0px;
 }
 
 .navbar-brand {
@@ -8,10 +10,11 @@
 }
 
 .panel-header {
-    height: 50px;
+    height: 80px;
     background-color: #204065;
     position: relative;
     overflow: hidden;
+
 }
 
 body{
@@ -19,7 +22,6 @@ body{
 }
 
 .card {
-    margin-bottom: 2rem;
     border: 0;
     border-radius: 0.1875rem;
     display: inline-block;
@@ -27,6 +29,7 @@ body{
     width: 100%;
     margin-bottom: 20px;
     box-shadow: 0 1px 15px 1px rgba(39, 39, 39, 0.1);
+    top: -50px;
 }
 
 .modal-header {
