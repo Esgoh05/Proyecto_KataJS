@@ -14,11 +14,14 @@
     background-color: #204065;
     position: relative;
     overflow: hidden;
-
 }
 
 body{
     background-color: #E3E3E3;
+}
+
+.btnAdd{
+    margin-bottom: 0.5rem;
 }
 
 .card {
@@ -39,3 +42,9 @@ body{
 .modal-title {
     color: #FFFFFF;
 }
+
+#pngGotaWelcome{
+    display: block;
+    margin: auto;
+    width:30%;
+  }

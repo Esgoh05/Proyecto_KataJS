@@ -19,10 +19,9 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
-        <h1 class="navbar-brand">Hola.</h1>
+        <h1 class="navbar-brand">Bienvenido</h1>
     </nav>
-    <div class="panel-header panel-header-sm">
-    </div>
+    <div class="panel-header panel-header-sm"></div>
 
     <main class="container">
         <section class="card">
@@ -31,7 +30,7 @@
                     <i class="bi bi-people-fill"></i>
                     Usuarios
                 </h2>
-                <button type="button" class="btn btn-primary float-end" id="btnAddUser" data-bs-toggle="modal"
+                <button type="button" class="btn btnAdd btn-primary float-end" id="btnAddUser" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">
                     <i class="bi bi-plus"></i>
                     Agregar nuevo usuario
@@ -48,6 +47,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                        <img src="../kataJs/img/gota_welcome.png" alt="Gota Welcome" id="pngGotaWelcome">
                         <form id="characterRegistry">
                             <div class="my-3">
                                 <label for="characterNameControl" class="form-label">Nombre</label>
