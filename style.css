@@ -1,0 +1,16 @@
+.navbar{
+    background-color: #204065;
+}
+
+.navbar-brand{
+    color: #FFFFFF;
+    padding-left: 3rem;
+}
+
+.modal-header {
+    background: linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
+}
+
+.modal-title {
+    color: #FFFFFF;
+}
