@@ -1,10 +1,32 @@
-.navbar{
+.navbar {
     background-color: #204065;
 }
 
-.navbar-brand{
+.navbar-brand {
     color: #FFFFFF;
     padding-left: 3rem;
+}
+
+.panel-header {
+    height: 50px;
+    background-color: #204065;
+    position: relative;
+    overflow: hidden;
+}
+
+body{
+    background-color: #E3E3E3;
+}
+
+.card {
+    margin-bottom: 2rem;
+    border: 0;
+    border-radius: 0.1875rem;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 15px 1px rgba(39, 39, 39, 0.1);
 }
 
 .modal-header {
