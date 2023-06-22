@@ -21,6 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
         <h1 class="navbar-brand">Hola.</h1>
     </nav>
+
     <main class="container">
         <section class="card">
             <div class="card-body">
@@ -28,7 +29,8 @@
                     <i class="bi bi-people-fill"></i>
                     Usuarios
                 </h2>
-                <button type="button" class="btn btn-primary" id="btnAddUser" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-primary float-end" id="btnAddUser" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
                     <i class="bi bi-plus"></i>
                     Agregar nuevo usuario
                 </button>
@@ -48,17 +50,17 @@
                             <div class="my-3">
                                 <label for="characterNameControl" class="form-label">Nombre</label>
                                 <input name="name" type="text" class="form-control" id="characterNameControl"
-                                    placeholder="Nombre del personaje">
+                                    placeholder="Nombre">
                             </div>
                             <div class="my-3">
-                                <label for="characterAgeControl" class="form-label">Edad</label>
+                                <label for="characterAgeControl" class="form-label">Telefono</label>
+                                <input name="age" type="phone" class="form-control" id="characterAgeControl"
+                                    placeholder="Telefono">
+                            </div>
+                            <div class="my-3">
+                                <label for="characterAgeControl" class="form-label">Telefono</label>
                                 <input name="age" type="number" class="form-control" id="characterAgeControl"
-                                    placeholder="Edad del personaje">
-                            </div>
-                            <div class="my-3">
-                                <label for="characterTeamControl" class="form-label">Facción</label>
-                                <input name="team" type="text" class="form-control" id="characterTeamControl"
-                                    placeholder="Facción del personaje">
+                                    placeholder="Email">
                             </div>
                             <!--<button type="submit" class="btn btn-primary mt-3" form="characterRegistry">Registrar</button>-->
                         </form>
@@ -73,37 +75,30 @@
         <!-- End Modal Registro de usuarios-->
 
 
-
-        <!-- Filtro de usuarios -->
-        <section class="row">
-            <div class="col-6 text-center">
-                <button id="orderButton" type="button" class="btn btn-primary mt-3">Ordenar</button>
-            </div>
-            <div class="col-6 text-center">
-                <label for="jediNameFilter" class="form-label">Buscar por nombre</label>
-                <input name="jediFilter" type="text" class="form-control" id="jediNameFilter" placeholder="Nombre">
-            </div>
-        </section>
-
         <!-- Tabla de registro de usuarios -->
-        <section class="container mt-3">
-            <h2>Jedis Registrados</h2>
-            <!-- Agregar un botón para cambiar el rol -->
-            <button type="button" class="btn btn-secondary" id="changeRoleBtn">Cambiar Rol</button>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Edad</th>
-                        <th>Equipo</th>
-                        <th>Rol</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="jediList">
-                </tbody>
-            </table>
+        <section class="card">
+            <div class="card-body">
+                <h2>Usuarios Registrados</h2>
+                <!-- Agregar un botón para cambiar el rol -->
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Tipo de usuario</th>
+                            <th>Correo electrónico</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jediList">
+                    </tbody>
+                </table>
+            </div>
         </section>
+
+        <!-- End Tabla de registro de usuarios -->
+
     </main>
 </body>
 
