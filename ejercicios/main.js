@@ -175,6 +175,9 @@ const swap = (array, index1, index2) => {
 };
 
 /* Función que crea el CRUD */
+//valor por defecto (filteredJedis = arregloJedis), en caso que no se lo pases obtiene el valor de arregloJedis
+//se asigna un parametro por defecto, filteredJedis es un parametro que se lo puedo pasar o no. En caso de no 
+//pasarlo, se obtendria el valor de arregloJedis
 const updateJediList = (filteredJedis = arregloJedis) => {
     const jediList = document.querySelector('#jediList');
     jediList.innerHTML = ''; // Limpiamos el contenido existente
