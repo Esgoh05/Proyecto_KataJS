@@ -68,13 +68,6 @@ th {
     color: #0c2646;
 }
 
-.swal2-styled.swal2-confirm{
-    background-color: black;
-
-   }
-   
-
-
-
-
-
+#seccionUsuariosRegistrados{
+    overflow: auto;
+}
