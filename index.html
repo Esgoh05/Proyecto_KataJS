@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <script type="module" defer src="/kataJs/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -95,7 +96,7 @@
 
 
         <!-- Tabla de registro de usuarios -->
-        <section class="card">
+        <section class="card" id="seccionUsuariosRegistrados">
             <div class="card-body">
                 <h2>Usuarios Registrados</h2>
                 <form class="d-flex" role="search">
@@ -114,7 +115,7 @@
                             <th>Eliminar</th>
                         </tr>
                     </thead>
-                    <tbody id="jediList">
+                    <tbody id="listaUsuarios">
                     </tbody>
                 </table>
             </div>
