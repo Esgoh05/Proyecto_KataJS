@@ -68,6 +68,13 @@ th {
     color: #0c2646;
 }
 
-#seccionUsuariosRegistrados{
+
+.swal2-image {
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+#seccionUsuariosRegistrados {
     overflow: auto;
 }

@@ -62,6 +62,37 @@ const rolePredeterminado = (roleInicio, role) => {
     }
 };
 
+const deleteUsuario = (event) => {
+    Swal.fire({
+        title: '¿Usted está seguro de querer eliminar este usuario?',
+        text: "Este proceso no podra revertirse!",
+        showCancelButton: true,
+        confirmButtonColor: '#0d6efd',
+        cancelButtonColor: '#d33',
+        imageUrl: '../kataJs/img/gotita_stop.jpg',
+        confirmButtonText: 'Ok',
+        cancelButtonText: 'Cancelar.'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            const index = event.target.dataset.index;
+            arregloUsuariosRegistrados.splice(index, 1);
+        
+            actualizaTablaUsuarios();
+            console.log(arregloUsuariosRegistrados);
+            Swal.fire(
+                'Eliminado!',
+                'El usuario ha sido eliminado.',
+                'success'
+            )
+        }
+      })
+    /*const index = event.target.dataset.index;
+    arregloUsuariosRegistrados.splice(index, 1);
+
+    actualizaTablaUsuarios();
+    console.log(arregloUsuariosRegistrados);*/
+};
+
 const actualizaTablaUsuarios = (filteredJedis = arregloUsuariosRegistrados) => {
     const listaUsuarios = document.querySelector('#listaUsuarios');
     listaUsuarios.innerHTML = ''; // Limpiamos el contenido existente
@@ -74,7 +105,7 @@ const actualizaTablaUsuarios = (filteredJedis = arregloUsuariosRegistrados) => {
           <td>${user.email}</td>
           <td>${user.role}</td>
           <td>
-            <button type="button" class="btn editBtn" data-index="${index}">
+            <button type="button" class="btn editBtn" data-bs-toggle="modal" data-bs-target="#modalEditUsers" data-index="${index}"">
                 <i class="bi bi-pencil-fill"></i>
                 Editar
             </button>
@@ -92,16 +123,16 @@ const actualizaTablaUsuarios = (filteredJedis = arregloUsuariosRegistrados) => {
     });
 
     // Agregar eventos a los botones de edición y eliminación
-    /*const editButtons = document.querySelectorAll('.editBtn');
+    const editButtons = document.querySelectorAll('.editBtn');
     const deleteButtons = document.querySelectorAll('.deleteBtn');
 
-    editButtons.forEach((button) => {
+    /*editButtons.forEach((button) => {
         button.addEventListener('click', handleEditJedi);
-    });
+    });*/
 
     deleteButtons.forEach((button) => {
-        button.addEventListener('click', handleDeleteJedi);
-    });*/
+        button.addEventListener('click', deleteUsuario);
+    });
 };
 
 /* Manejador de evento */
