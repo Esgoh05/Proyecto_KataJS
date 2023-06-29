@@ -43,7 +43,7 @@
         </section>
 
         <!-- Modal Registro de usuarios -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <section class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog p-5">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -54,33 +54,25 @@
                         <img src="../kataJs/img/gota_welcome.png" alt="Gota Welcome" id="pngGotaWelcome">
                         <form id="registroUsuariosForm">
                             <div class="form-group my-3">
-                                <label for="name" class="col-form-label">Nombre:</label>
-                                <input type="text" name="name" id="name" class="form-control" required>
-                                <label class="invalid-feedback">
+                                <label for="nameUser" class="col-form-label">Nombre:</label>
+                                <input type="text" name="nameUser" id="nameUser" class="form-control" required>
+                                <label for="nameUser" class="invalid-feedback">
                                     Por favor, completa este campo.
                                 </label>
                             </div>
                             <div class="form-group my-3">
-                                <label for="phone" class="col-form-label">Teléfono:</label>
-                                <input type="text" name="phone" id="phone" class="form-control" required>
-                                <label class="invalid-feedback">
+                                <label for="phoneUser" class="col-form-label">Teléfono:</label>
+                                <input type="text" name="phoneUser" id="phoneUser" class="form-control" required>
+                                <label for="phoneUser" class="invalid-feedback">
                                     Por favor, completa este campo.
                                 </label>
                             </div>
-                            <!--<div class="form-group my-3">
-                                <label for="inputState">Asignar tipo de usuario:</label>
-                                <select id="inputState" class="form-control" name="usertype" required>
-                                    <option value="" hidden selected>Selecciona uno</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="user">User</option>
-                                </select>
-                                <div id="validationServer04Feedback" class="invalid-feedback">
-                                    Por favor, selecciona un campo.
-                                </div>
-                            </div>-->
                             <div class="form-group my-3">
-                                <label for="email" class="col-form-label">Correo Electrónico:</label>
-                                <input type="text" name="email" id="email" class="form-control" required>
+                                <label for="emailUser" class="col-form-label">Correo Electrónico:</label>
+                                <input type="text" name="emailUser" id="emailUser" class="form-control" required>
+                                <label for="emailUser" class="invalid-feedback">
+                                    Por favor, completa este campo.
+                                </label>
                             </div>
                     </div>
                     <div class="modal-footer border-white">
@@ -92,7 +84,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- End Modal Registro de usuarios-->
 
 
@@ -125,34 +117,34 @@
         <!-- End Tabla de registro de usuarios -->
 
         <!-- Modal Registro de usuarios -->
-        <div class="modal fade" id="modalEditUsers" tabindex="-1" aria-labelledby="exampleModalLabel"
+        <section class="modal fade" id="modalEditUsers" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog p-5">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar un nuevo usuario</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar usuario</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <img src="../kataJs/img/gota_welcome.png" alt="Gota Welcome" id="pngGotaWelcome">
-                        <form id="registroUsuariosForm">
+                        <form id="editarUsuariosForm">
                             <div class="form-group my-3">
-                                <label for="name" class="col-form-label">Nombre:</label>
-                                <input type="text" name="name" id="name" class="form-control" required>
-                                <label class="invalid-feedback">
+                                <label for="nameEdit" class="col-form-label">Nombre:</label>
+                                <input type="text" name="nameEdit" id="nameEdit" class="form-control" oninput="myFunction()" required>
+                                <label for="nameEdit" class="invalid-feedback">
                                     Por favor, completa este campo.
                                 </label>
                             </div>
                             <div class="form-group my-3">
-                                <label for="phone" class="col-form-label">Teléfono:</label>
-                                <input type="text" name="phone" id="phone" class="form-control" required>
-                                <label class="invalid-feedback">
+                                <label for="phoneEdit" class="col-form-label">Teléfono:</label>
+                                <input type="number" name="phoneEdit" id="phoneEdit" class="form-control" required>
+                                <label for="phoneEdit" class="invalid-feedback">
                                     Por favor, completa este campo.
                                 </label>
                             </div>
                             <div class="form-group my-3">
-                                <label for="inputState">Asignar tipo de usuario:</label>
-                                <select id="inputState" class="form-control" name="usertype" required>
+                                <label for="inputStateEdit">Asignar tipo de usuario:</label>
+                                <select id="inputStateEdit" class="form-control" name="usertypeEdit" required>
                                     <option value="" hidden selected>Selecciona tipo de usuario</option>
                                     <option value="admin">Administrador</option>
                                     <option value="user">User</option>
@@ -162,19 +154,19 @@
                                 </div>
                             </div>
                             <div class="form-group my-3">
-                                <label for="email" class="col-form-label">Correo Electrónico:</label>
-                                <input type="text" name="email" id="email" class="form-control" required>
+                                <label for="emailEdit" class="col-form-label">Correo Electrónico:</label>
+                                <input type="email" name="emailEdit" id="emailEdit" class="form-control" required>
                             </div>
                     </div>
                     <div class="modal-footer border-white">
                         <button type="button" class="btn btn-danger" id="btnCerrarModal"
                             data-bs-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-primary" form="registroUsuariosForm">Registrar</button>
+                        <button type="submit" class="btn btn-primary" form="editarUsuariosForm">Registrar</button>
                     </div>
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- End Modal Registro de usuarios-->
 
     </main>
